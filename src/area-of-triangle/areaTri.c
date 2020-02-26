@@ -1,14 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
-int isValidTriangle(int a, int b, int c)
-{
-  // Theory: https://en.wikipedia.org/wiki/Triangle_inequality
-  if (a + b <= c || b + c <= a || c + a <= b)
-    return 0;
-
-  return 1;
-}
+#include "../../lib/triangle.h"
 
 void main()
 {
@@ -26,8 +18,8 @@ void main()
   if (isValidTriangle(edge1, edge2, edge3) == 1)
   {
     int perimeter = edge1 + edge2 + edge3;
-    float s = (float)perimeter / 2; // casting 'perimeter' into float to prevent this from returning int
-    printf("\nArea: %0.2f sq. unit", sqrt(s * (s - edge1) * (s - edge2) * (s - edge3)));
+    float s = (float)perimeter / 2; // casting 'perimeter' into float to prevent the calculation from returning integer
+    printf("Area: %0.2f sq. unit", sqrt(s * (s - edge1) * (s - edge2) * (s - edge3)));
   }
   else
     printf("The edges will not form any valid triangle!");
