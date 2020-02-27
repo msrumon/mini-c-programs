@@ -1,4 +1,4 @@
-# instructions
+# Instructions
 
 1. Take two integers from the user.
 2. Find the greatest common divisor (aka GCD) of those two numbers and print it.
